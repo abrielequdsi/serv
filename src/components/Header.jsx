@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { useRouter } from 'next/router'
 
 const navigation = {
     categories: [
@@ -101,6 +102,8 @@ return classes.filter(Boolean).join(' ')
 }
 
 export const Header = () => {
+    const router = useRouter()
+
   return (
     <header className="relative z-10">
 <nav aria-label="Top">
@@ -152,6 +155,7 @@ export const Header = () => {
                   <button
                         type="button"
                         className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        onClick={() => router.push('/register')}
                     >
                         Register
                     </button>
@@ -171,6 +175,7 @@ export const Header = () => {
                  <button
                     type="button"
                     className="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    onClick={() => router.push('/signin')}
                 >
                     Sign In
                 </button>

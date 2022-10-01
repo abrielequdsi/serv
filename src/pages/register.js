@@ -11,10 +11,9 @@
     ],
   }
   ```
-*/
-export default function signin() {
+*/ export default function signup() {
     return (
-        <div className="bg-gray-100 pt-28 pb-44">
+        <div className="bg-gray-100 pt-10 pb-24">
             {/*
           This example requires updating your template:
   
@@ -31,7 +30,7 @@ export default function signin() {
                         alt="Your Company"
                     />
                     <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-                        Sign in to your account
+                        Register to create account
                     </h2>
                     {/* <p className="mt-2 text-center text-sm text-gray-600">
                         Or{" "}
@@ -85,6 +84,84 @@ export default function signin() {
                                 </div>
                             </div>
 
+                            <div>
+                                <label
+                                    htmlFor="username"
+                                    className="block text-sm font-medium text-gray-700"
+                                >
+                                    Username
+                                </label>
+                                <div className="mt-1">
+                                    <input
+                                        id="username"
+                                        name="username"
+                                        type="username"
+                                        autoComplete="current-username"
+                                        required
+                                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    htmlFor="phone-number"
+                                    className="block text-sm font-medium text-gray-700"
+                                >
+                                    Phone Number
+                                </label>
+                                <div className="mt-1">
+                                    <input
+                                        id="phone-number"
+                                        name="phone-number"
+                                        type="phone-number"
+                                        autoComplete="current-phone-number"
+                                        required
+                                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    htmlFor="address"
+                                    className="block text-sm font-medium text-gray-700"
+                                >
+                                    Address
+                                </label>
+                                <div className="mt-1">
+                                    <input
+                                        id="address"
+                                        name="address"
+                                        type="address"
+                                        autoComplete="current-address"
+                                        required
+                                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    htmlFor="type"
+                                    className="block text-sm font-medium text-gray-700"
+                                >
+                                    What are you?
+                                </label>
+                                <div className="mt-1">
+                                    <select
+                                        id="location"
+                                        name="location"
+                                        // className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                        className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                        defaultValue="Buyer"
+                                    >
+                                        <option>Buyer</option>
+                                        <option>Vendor</option>
+                                    </select>
+                                </div>
+                            </div>
+
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center">
                                     <input
@@ -116,7 +193,7 @@ export default function signin() {
                                     type="submit"
                                     className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                                 >
-                                    Sign in
+                                    Register
                                 </button>
                             </div>
                         </form>
@@ -140,7 +217,7 @@ export default function signin() {
                                         className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
                                     >
                                         <span className="sr-only">
-                                            Sign in with Facebook
+                                            Register with Facebook
                                         </span>
                                         <svg
                                             className="h-5 w-5"
