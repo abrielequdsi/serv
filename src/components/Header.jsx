@@ -1,8 +1,4 @@
 import React from 'react'
-import { Fragment, useState } from 'react'
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingCartIcon, UserIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useRouter } from 'next/router'
 
 
@@ -20,30 +16,30 @@ export const Header = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo (lg+) */}
-          <div className="hidden lg:flex lg:items-center">
-            <a href="#">
+          <button className="hidden lg:flex lg:items-center">
+            <div onClick={() => router.push('/')}>
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-            </a>
-          </div>
+            </div>
+          </button>
 
         
 
           {/* Mobile menu and search (lg-) */}
         
           {/* Logo (lg-) */}
-          <a href="#" className="lg:hidden">
+          <button onClick={() => router.push('/')} className="lg:hidden">
             <span className="sr-only">Your Company</span>
             <img
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
               className="h-8 w-auto"
             />
-          </a>
+          </button>
 
           <div className="flex flex-1 items-center justify-end">
             <div className="flex items-center lg:ml-8">
