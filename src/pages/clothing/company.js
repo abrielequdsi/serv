@@ -1,5 +1,7 @@
 import React from "react";
 
-export const company = () => {
+const company = () => {
     return <div>company</div>;
 };
+
+export default company;
