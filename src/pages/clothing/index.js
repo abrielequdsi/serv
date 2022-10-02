@@ -21,83 +21,83 @@ import { Header } from "@/components/Header";
 const products = [
     {
         id: 1,
-        name: "Earthen Bottle",
+        name: "Embroidery",
         href: "#",
         price: "$48",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
+            "https://i.etsystatic.com/12360908/r/il/fc03c4/2455221650/il_fullxfull.2455221650_ghp3.jpg",
         imageAlt:
-            "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+            "Embroider",
     },
     {
         id: 2,
-        name: "Nomad Tumbler",
+        name: "Screen Printing",
         href: "#",
         price: "$35",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
+            "https://i0.wp.com/3rdrailclothing.co.uk/wp-content/uploads/2016/07/30.jpg?fit=1000%2C1000&ssl=1",
         imageAlt:
-            "Olive drab green insulated bottle with flared screw lid and flat top.",
+            "Screen Printing",
     },
     {
         id: 3,
-        name: "Focus Paper Refill",
+        name: "Transfer Printing",
         href: "#",
         price: "$89",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
+            "https://i.ytimg.com/vi/IMr8uFlsvtU/maxresdefault.jpg",
         imageAlt:
-            "Person using a pen to cross a task off a productivity paper card.",
+            "Transfer Printing",
     },
     {
         id: 4,
-        name: "Machined Mechanical Pencil",
+        name: "Direct to Garment",
         href: "#",
         price: "$35",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
+            "https://thefashionstarter.com/wp-content/uploads/2022/04/direct-to-garment-printing.jpeg",
         imageAlt:
-            "Hand holding black machined steel mechanical pencil with brass tip and top.",
+            "Direct to Garment",
     },
     {
         id: 5,
-        name: "Earthen Bottle",
+        name: "Tailors",
         href: "#",
         price: "$48",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
+            "https://www.heddels.com/wp-content/uploads/2019/11/how-to-find-a-tailor.jpg",
         imageAlt:
-            "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+            "Tailors",
     },
     {
         id: 6,
-        name: "Nomad Tumbler",
+        name: "Rhinestone",
         href: "#",
         price: "$35",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
+            "https://i0.wp.com/www.sunmeibutton.com/wp-content/uploads/2019/01/what-is-a-rhinestone-types-of-rhinestones.jpg",
         imageAlt:
-            "Olive drab green insulated bottle with flared screw lid and flat top.",
+            "Rhinestone",
     },
     {
         id: 7,
-        name: "Focus Paper Refill",
+        name: "Embossing",
         href: "#",
         price: "$89",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
+            "https://www.boxmark.com/0cache/bilder1651_1000x700_f_center_middle.jpg",
         imageAlt:
-            "Person using a pen to cross a task off a productivity paper card.",
+            "Embossing",
     },
     {
         id: 8,
-        name: "Machined Mechanical Pencil",
+        name: "Labeling",
         href: "#",
         price: "$35",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
+            "https://fashioninsiders.co/wp-content/uploads/2019/02/clothing_size_labels.jpg",
         imageAlt:
-            "Hand holding black machined steel mechanical pencil with brass tip and top.",
+            "Labeling",
     },
     // More products...
 ];
@@ -135,17 +135,11 @@ export default function index() {
             <Header />
             <div>
                 <main>
-                    <div className="bg-white">
+                    <div className="bg-white text-center">
                         <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
                             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                                Clothing sub-services
+                                What services do you need in <b>Clothing</b> ?
                             </h1>
-                            <p className="mt-4 max-w-xl text-sm text-gray-700">
-                                Our thoughtfully designed workspace objects are
-                                crafted in limited runs. Improve your
-                                productivity and organization with these sale
-                                items before we run out.
-                            </p>
                         </div>
                     </div>
 
@@ -160,28 +154,32 @@ export default function index() {
                             Products
                         </h2>
 
-                        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
                             {products.map((product) => (
                                 <a
                                     key={product.id}
                                     href={product.href}
                                     className="group"
                                 >
-                                    <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                                {/* aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 text-center */}
+                                {/* h-full w-full object-cover opacity-25 object-center group-hover:opacity-100 */}
+                                {/* mt-4 text-lg relative  */}
+                                    <div className=" card-zoom ">
                                         <img
                                             src={product.imageSrc}
                                             alt={product.imageAlt}
-                                            className="h-full w-full object-cover object-center group-hover:opacity-75"
+                                            className=" card-zoom-image "
                                             onClick={() =>
                                                 router.push(
                                                     "/clothing/embosing"
                                                 )
                                             }
                                         />
+                                        <h3 className="card-zoom-text">
+                                            {product.name} 
+                                            </h3>
                                     </div>
-                                    <h3 className="mt-4 text-sm text-gray-700">
-                                        {product.name}
-                                    </h3>
+
                                 </a>
                             ))}
                         </div>
