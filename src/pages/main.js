@@ -28,6 +28,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
 import { Comboboxes } from "@/components/Comboboxes";
 import { useRouter } from "next/router";
+import background_main from "src/images/background_main.png";
 
 const categories = [
     {
@@ -109,14 +110,14 @@ export default function main() {
                     className="absolute inset-0 overflow-hidden"
                 >
                     <img
-                        src="https://tailwindui.com/img/ecommerce-images/home-page-01-hero-full-width.jpg"
+                        src={background_main.src}
                         alt=""
                         className="h-full w-full object-cover object-center"
                     />
                 </div>
                 <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gray-900 opacity-50"
+                    className="absolute inset-0 bg-gray-900 opacity-70"
                 />
 
                 {/* Navigation */}

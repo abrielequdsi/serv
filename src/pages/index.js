@@ -35,31 +35,35 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
 import Link from "next/link";
-import rifqi from "src/images/rifqi.jpg"
-import irsyad from "src/images/irsyad.jpg"
-import afiq from "src/images/afiq.jpg"
-import abriele from "src/images/abriele.jpg"
+import rifqi from "src/images/rifqi.jpg";
+import irsyad from "src/images/irsyad.jpg";
+import afiq from "src/images/afiq.jpg";
+import abriele from "src/images/abriele.jpg";
 
 const people = [
     {
         name: "Abriele Qudsi",
+        // role: "Russian Hacker",
         imageUrl: abriele.src,
-        linkedinUrl: "https://www.linkedin.com/in/abrielequdsi/"
+        linkedinUrl: "https://www.linkedin.com/in/abrielequdsi/",
     },
     {
         name: "Muhammad Afiq",
         imageUrl: afiq.src,
-        linkedinUrl: "https://www.linkedin.com/in/muhammad-afiq-abdul-wafi-393ab1211/"
+        // role: "Cat Burger",
+        linkedinUrl:
+            "https://www.linkedin.com/in/muhammad-afiq-abdul-wafi-393ab1211/",
     },
     {
         name: "Muhammad Irsyad",
         imageUrl: irsyad.src,
-        linkedinUrl: "https://www.linkedin.com/in/muhammad-irsyad-abdul-kadir-alwini-b63562216/"
+        linkedinUrl:
+            "https://www.linkedin.com/in/muhammad-irsyad-abdul-kadir-alwini-b63562216/",
     },
     {
         name: "Sultan Rifqi",
         imageUrl: rifqi.src,
-        linkedinUrl: "https://www.linkedin.com/in/sultan-rifqi/"
+        linkedinUrl: "https://www.linkedin.com/in/sultan-rifqi/",
     },
     // More people...
 ];
@@ -281,7 +285,7 @@ export default function index() {
                                     src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
                                     alt="People working on laptops"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-white mix-blend-multiply" />
                             </div>
                             <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                                 <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -358,7 +362,26 @@ export default function index() {
                 </div> */}
 
                 {/* Alternating Feature Sections */}
-                <div className="relative overflow-hidden pt-16 pb-32">
+                <div className="bg-white">
+                    <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+                        <div className="text-center">
+                            <h2 className="text-lg font-semibold text-indigo-600">
+                                About Us
+                            </h2>
+                            <p className="mt-1 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-5xl">
+                                What we do
+                            </p>
+                            <p className="mx-auto mt-5 max-w-3xl text-xl text-gray-500">
+                                A platform built to bridge the connection
+                                between service providers and vendors to micro,
+                                small, and medium enterprises. A tool that will
+                                shift how MSMEs operate and grow from a digital
+                                standpoint.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="relative overflow-hidden pt-16 pb-32">
                     <div
                         aria-hidden="true"
                         className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"
@@ -369,22 +392,25 @@ export default function index() {
                                 <div>
                                     <div className="text-center mb-6">
                                         <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
-                                        WHAT WE DO
+                                            WHAT WE DO
                                         </h2>
                                     </div>
-                                    {/* <div>
+                                    <div>
                                         <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
                                             <InboxIcon
                                                 className="h-6 w-6 text-white"
                                                 aria-hidden="true"
                                             />
                                         </span>
-                                    </div> */}
+                                    </div>
                                     <div className="mt-8">
                                         <h2 className="text-3xl font tracking-tight text-gray-900">
-                                            A platform built to bridge the connection between service providers and vendors to micro, small, and medium enterprises.
+                                            A platform built to bridge the
+                                            connection between service providers
+                                            and vendors to micro, small, and
+                                            medium enterprises.
                                         </h2>
-                                        {/* <p className="mt-4 text-lg text-gray-500">
+                                        <p className="mt-4 text-lg text-gray-500">
                                             Semper curabitur ullamcorper posuere
                                             nunc sed. Ornare iaculis bibendum
                                             malesuada faucibus lacinia
@@ -392,15 +418,15 @@ export default function index() {
                                             viverra duis. In venenatis sem arcu
                                             pretium pharetra at. Lectus viverra
                                             dui tellus ornare pharetra.
-                                        </p> */}
-                                        {/* <div className="mt-6">
+                                        </p>
+                                        <div className="mt-6">
                                             <a
                                                 href="#"
                                                 className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                                             >
                                                 Get started
                                             </a>
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -410,19 +436,21 @@ export default function index() {
                         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3 lg:gap-24 lg:px-8">
                             <div className="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0 lg:col-span-2">
                                 <div>
-                                    {/* <div>
+                                    <div>
                                         <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
                                             <SparklesIcon
                                                 className="h-6 w-6 text-white"
                                                 aria-hidden="true"
                                             />
                                         </span>
-                                    </div> */}
+                                    </div>
                                     <div>
                                         <h2 className="text-3xl font tracking-tight text-gray-900">
-                                            A tool that will shift how MSMEs operate and grow from a digital standpoint.
+                                            A tool that will shift how MSMEs
+                                            operate and grow from a digital
+                                            standpoint.
                                         </h2>
-                                        {/* <p className="mt-4 text-lg text-gray-500">
+                                        <p className="mt-4 text-lg text-gray-500">
                                             Semper curabitur ullamcorper posuere
                                             nunc sed. Ornare iaculis bibendum
                                             malesuada faucibus lacinia
@@ -430,21 +458,21 @@ export default function index() {
                                             viverra duis. In venenatis sem arcu
                                             pretium pharetra at. Lectus viverra
                                             dui tellus ornare pharetra.
-                                        </p> */}
-                                        {/* <div className="mt-6">
+                                        </p>
+                                        <div className="mt-6">
                                             <a
                                                 href="#"
                                                 className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                                             >
                                                 Get started
                                             </a>
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Gradient Feature Section */}
                 {/* <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
@@ -488,7 +516,7 @@ export default function index() {
                         <div className="space-y-12">
                             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                                    Meet our team
+                                    Who we are
                                 </h2>
                                 {/* <p className="text-xl text-gray-500">
                                     Ornare sagittis, suspendisse in hendrerit
@@ -511,9 +539,9 @@ export default function index() {
                                             <div className="space-y-2">
                                                 <div className="space-y-1 text-lg font-medium leading-6">
                                                     <h3>{person.name}</h3>
-                                                    {/* <p className="text-indigo-600">
+                                                    <p className="text-indigo-600">
                                                         {person.role}
-                                                    </p> */}
+                                                    </p>
                                                 </div>
                                                 <ul
                                                     role="list"

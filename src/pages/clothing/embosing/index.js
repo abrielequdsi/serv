@@ -329,9 +329,9 @@ export default function index() {
                         <h1 className="text-4xl font-bold tracking-tight text-gray-900">
                             Available Vendors
                         </h1>
-                        <p className="mt-4 text-base text-gray-500">
+                        {/* <p className="mt-4 text-base text-gray-500">
                             Lorem ipsum dolor sit amet, consectetur adipis
-                        </p>
+                        </p> */}
                     </div>
 
                     <div className="pt-12 pb-24 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
