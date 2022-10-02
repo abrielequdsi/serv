@@ -108,6 +108,7 @@ export default function confirmation() {
     const [selectedDeliveryMethod, setSelectedDeliveryMethod] = useState(
         deliveryMethods[0]
     );
+    const [quatity, setQuatity] = useState(0);
     const router = useRouter();
 
     return (
@@ -136,11 +137,13 @@ export default function confirmation() {
                                             </label>
                                             <div className="mt-1">
                                                 <input
+                                                    defaultValue="Embosing"
+                                                    disabled
+                                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500"
                                                     type="text"
                                                     id="card-number"
                                                     name="card-number"
                                                     autoComplete="cc-number"
-                                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                                 />
                                             </div>
                                         </div>
@@ -158,7 +161,12 @@ export default function confirmation() {
                                                         id="card-number"
                                                         name="card-number"
                                                         autoComplete="cc-number"
-                                                        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                        value={
+                                                            "Rp. " +
+                                                            quatity * 10000
+                                                        }
+                                                        disabled
+                                                        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500"
                                                     />
                                                 </div>
                                             </div>
@@ -176,6 +184,11 @@ export default function confirmation() {
                                                         name="card-number"
                                                         autoComplete="cc-number"
                                                         className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                        onChange={(e) =>
+                                                            setQuatity(
+                                                                e.target.value
+                                                            )
+                                                        }
                                                     />
                                                 </div>
                                             </div>
@@ -210,7 +223,9 @@ export default function confirmation() {
                                                     id="card-number"
                                                     name="card-number"
                                                     autoComplete="cc-number"
-                                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                    defaultValue="Will send the clothes within 3 x 24 Hours"
+                                                    disabled
+                                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500"
                                                 />
                                             </div>
                                         </div>
