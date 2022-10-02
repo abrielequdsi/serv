@@ -20,6 +20,11 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon, PlusIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
 import { StarIcon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/router";
+import brand1 from "src/images/brand1.png";
+import brand2 from "src/images/brand2.png";
+import brand3 from "src/images/brand3.png";
+import brand4 from "src/images/brand4.png";
 
 const filters = [
     {
@@ -57,30 +62,48 @@ const filters = [
 const products = [
     {
         id: 1,
-        name: "Basic Tee 8-Pack",
+        name: "Brodir 364",
         href: "/clothing/company",
-        price: "$256",
-        description:
-            "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
-        options: "8 colors",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-01.jpg",
+        price: "Rp25-45k",
+        description: "Bandung",
+        stars: "5",
+        imageSrc: brand1.src,
         imageAlt:
             "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
     },
     {
         id: 2,
-        name: "Basic Tee",
+        name: "Custom Kekinian",
         href: "/clothing/company",
-        price: "$32",
-        description:
-            "Look like a visionary CEO and wear the same black t-shirt every day.",
-        options: "Black",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-02.jpg",
-        imageAlt: "Front of plain black t-shirt.",
+        price: "Rp50-80k",
+        description: "Medan",
+        stars: "5",
+        imageSrc: brand2.src,
+        imageAlt:
+            "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
     },
-    // More products...
+    {
+        id: 3,
+        name: "Pontianak Bordir",
+        href: "/clothing/company",
+        price: "Rp20-40k",
+        description: "Pontianak",
+        stars: "4",
+        imageSrc: brand3.src,
+        imageAlt:
+            "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
+    },
+    {
+        id: 4,
+        name: "Pusat Bordir Custom",
+        href: "/clothing/company",
+        price: "Rp7-10k",
+        description: "Bekasi",
+        stars: "5",
+        imageSrc: brand4.src,
+        imageAlt:
+            "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
+    },
 ];
 
 const stars = {
@@ -92,7 +115,7 @@ const stars = {
         </div>
     ),
     3: (
-        <div className="flex">
+        <div className="flex ">
             <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
             <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
             <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
@@ -123,6 +146,7 @@ function classNames(...classes) {
 export default function index() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+    const router = useRouter();
 
     return (
         <div className="bg-white">
@@ -397,31 +421,31 @@ export default function index() {
                                     <div
                                         key={product.id}
                                         className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white"
+                                        onClick={() =>
+                                            router.push("/clothing/company")
+                                        }
                                     >
-                                        <div className="aspect-w-3 aspect-h-4 bg-gray-200 group-hover:opacity-75 sm:aspect-none sm:h-96">
+                                        <div className="aspect-h-4 bg-white group-hover:opacity-75 sm:aspect-none border-b-2">
                                             <img
+                                                // className="mx-auto h-40 w-40 xl:h-40 xl:w-40"
+                                                className="mx-auto h-40 w-40"
                                                 src={product.imageSrc}
                                                 alt={product.imageAlt}
-                                                className="h-full w-full object-cover object-center sm:h-full sm:w-full"
                                             />
                                         </div>
                                         <div className="flex flex-1 flex-col space-y-2 p-4">
-                                            <h3 className="text-sm font-medium text-gray-900">
-                                                <a href={product.href}>
-                                                    <span
-                                                        aria-hidden="true"
-                                                        className="absolute inset-0"
-                                                    />
+                                            <div>
+                                                <h3 className="text-lg font-medium text-gray-900">
                                                     {product.name}
-                                                </a>
-                                            </h3>
-                                            <p className="text-sm text-gray-500">
-                                                {product.description}
-                                            </p>
-                                            <div className="flex flex-1 flex-col justify-end">
-                                                <p className="text-sm italic text-gray-500">
-                                                    {product.options}
+                                                </h3>
+                                                <p className="text-sm text-gray-500">
+                                                    {product.description}
                                                 </p>
+                                            </div>
+                                            <div className="flex justify-between align-center">
+                                                <div className="">
+                                                    {stars[product.stars]}
+                                                </div>
                                                 <p className="text-base font-medium text-gray-900">
                                                     {product.price}
                                                 </p>
