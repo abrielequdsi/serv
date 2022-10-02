@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /*
   This example requires some changes to your config:
   
@@ -14,6 +15,7 @@
 */
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
+import { useRouter } from "next/router";
 import {
     ArrowUturnLeftIcon,
     Bars3Icon,
@@ -262,6 +264,7 @@ function classNames(...classes) {
 }
 
 export default function index() {
+    const router = useRouter();
     return (
         <div className="bg-white">
             <Header />
@@ -296,12 +299,12 @@ export default function index() {
                                     aliqua.
                                 </p>
                                 <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
-                                    <Link
-                                        href="/main"
+                                    <button
                                         className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8"
+                                        onClick={() => router.push("/main")}
                                     >
                                         Get started
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
