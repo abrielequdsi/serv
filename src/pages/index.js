@@ -35,31 +35,31 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
 import Link from "next/link";
+import rifqi from "src/images/rifqi.jpg"
+import irsyad from "src/images/irsyad.jpg"
+import afiq from "src/images/afiq.jpg"
+import abriele from "src/images/abriele.jpg"
 
 const people = [
     {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        imageUrl:
-            "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        name: "Abriele Qudsi",
+        imageUrl: abriele.src,
+        linkedinUrl: "https://www.linkedin.com/in/abrielequdsi/"
     },
     {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        imageUrl:
-            "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        name: "Muhammad Afiq",
+        imageUrl: afiq.src,
+        linkedinUrl: "https://www.linkedin.com/in/muhammad-afiq-abdul-wafi-393ab1211/"
     },
     {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        imageUrl:
-            "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        name: "Muhammad Irsyad",
+        imageUrl: irsyad.src,
+        linkedinUrl: "https://www.linkedin.com/in/muhammad-irsyad-abdul-kadir-alwini-b63562216/"
     },
     {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        imageUrl:
-            "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+        name: "Sultan Rifqi",
+        imageUrl: rifqi.src,
+        linkedinUrl: "https://www.linkedin.com/in/sultan-rifqi/"
     },
     // More people...
 ];
@@ -286,18 +286,18 @@ export default function index() {
                             <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                                 <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
                                     <span className="block text-white">
-                                        Get match easily
+                                        We provide platform
                                     </span>
                                     <span className="block text-indigo-200">
-                                        with Vendors
+                                        for Vendors
                                     </span>
                                 </h1>
-                                <p className="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-200 sm:max-w-3xl">
+                                {/* <p className="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-200 sm:max-w-3xl">
                                     Anim aute id magna aliqua ad ad non deserunt
                                     sunt. Qui irure qui lorem cupidatat commodo.
                                     Elit sunt amet fugiat veniam occaecat fugiat
                                     aliqua.
-                                </p>
+                                </p> */}
                                 <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                                     <button
                                         className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8"
@@ -312,7 +312,7 @@ export default function index() {
                 </div>
 
                 {/* Logo Cloud */}
-                <div className="bg-gray-100">
+                {/* <div className="bg-gray-100">
                     <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
                         <p className="text-center text-base font-semibold text-gray-500">
                             Trusted by over 5 very average small businesses
@@ -355,7 +355,7 @@ export default function index() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Alternating Feature Sections */}
                 <div className="relative overflow-hidden pt-16 pb-32">
@@ -367,19 +367,24 @@ export default function index() {
                         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3 lg:gap-24 lg:px-8">
                             <div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-span-2">
                                 <div>
-                                    <div>
+                                    <div className="text-center mb-6">
+                                        <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
+                                        WHAT WE DO
+                                        </h2>
+                                    </div>
+                                    {/* <div>
                                         <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
                                             <InboxIcon
                                                 className="h-6 w-6 text-white"
                                                 aria-hidden="true"
                                             />
                                         </span>
-                                    </div>
-                                    <div className="mt-6">
-                                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                                            Stay on top of customer support
+                                    </div> */}
+                                    <div className="mt-8">
+                                        <h2 className="text-3xl font tracking-tight text-gray-900">
+                                            A platform built to bridge the connection between service providers and vendors to micro, small, and medium enterprises.
                                         </h2>
-                                        <p className="mt-4 text-lg text-gray-500">
+                                        {/* <p className="mt-4 text-lg text-gray-500">
                                             Semper curabitur ullamcorper posuere
                                             nunc sed. Ornare iaculis bibendum
                                             malesuada faucibus lacinia
@@ -387,37 +392,37 @@ export default function index() {
                                             viverra duis. In venenatis sem arcu
                                             pretium pharetra at. Lectus viverra
                                             dui tellus ornare pharetra.
-                                        </p>
-                                        <div className="mt-6">
+                                        </p> */}
+                                        {/* <div className="mt-6">
                                             <a
                                                 href="#"
                                                 className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                                             >
                                                 Get started
                                             </a>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="mt-10">
+                    <div className="mt-0.5">
                         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3 lg:gap-24 lg:px-8">
                             <div className="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0 lg:col-span-2">
                                 <div>
-                                    <div>
+                                    {/* <div>
                                         <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
                                             <SparklesIcon
                                                 className="h-6 w-6 text-white"
                                                 aria-hidden="true"
                                             />
                                         </span>
-                                    </div>
-                                    <div className="mt-6">
-                                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                                            Better understand your customers
+                                    </div> */}
+                                    <div>
+                                        <h2 className="text-3xl font tracking-tight text-gray-900">
+                                            A tool that will shift how MSMEs operate and grow from a digital standpoint.
                                         </h2>
-                                        <p className="mt-4 text-lg text-gray-500">
+                                        {/* <p className="mt-4 text-lg text-gray-500">
                                             Semper curabitur ullamcorper posuere
                                             nunc sed. Ornare iaculis bibendum
                                             malesuada faucibus lacinia
@@ -425,15 +430,15 @@ export default function index() {
                                             viverra duis. In venenatis sem arcu
                                             pretium pharetra at. Lectus viverra
                                             dui tellus ornare pharetra.
-                                        </p>
-                                        <div className="mt-6">
+                                        </p> */}
+                                        {/* <div className="mt-6">
                                             <a
                                                 href="#"
                                                 className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
                                             >
                                                 Get started
                                             </a>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +447,7 @@ export default function index() {
                 </div>
 
                 {/* Gradient Feature Section */}
-                <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
+                {/* <div className="bg-gradient-to-r from-purple-800 to-indigo-700">
                     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
                         <h2 className="text-3xl font-bold tracking-tight text-white">
                             Inbox support built for efficiency
@@ -475,7 +480,7 @@ export default function index() {
                             ))}
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Team Section */}
                 <div className="bg-white">
@@ -485,11 +490,11 @@ export default function index() {
                                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                                     Meet our team
                                 </h2>
-                                <p className="text-xl text-gray-500">
+                                {/* <p className="text-xl text-gray-500">
                                     Ornare sagittis, suspendisse in hendrerit
                                     quis. Sed dui aliquet lectus sit pretium
                                     egestas vel mattis neque.
-                                </p>
+                                </p> */}
                             </div>
                             <ul
                                 role="list"
@@ -506,15 +511,15 @@ export default function index() {
                                             <div className="space-y-2">
                                                 <div className="space-y-1 text-lg font-medium leading-6">
                                                     <h3>{person.name}</h3>
-                                                    <p className="text-indigo-600">
+                                                    {/* <p className="text-indigo-600">
                                                         {person.role}
-                                                    </p>
+                                                    </p> */}
                                                 </div>
                                                 <ul
                                                     role="list"
                                                     className="flex justify-center space-x-5"
                                                 >
-                                                    <li>
+                                                    {/* <li>
                                                         <a
                                                             href={
                                                                 person.twitterUrl
@@ -522,7 +527,7 @@ export default function index() {
                                                             className="text-gray-400 hover:text-gray-500"
                                                         >
                                                             <span className="sr-only">
-                                                                Twitter
+                                                                GitHub
                                                             </span>
                                                             <svg
                                                                 className="h-5 w-5"
@@ -533,7 +538,7 @@ export default function index() {
                                                                 <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                                                             </svg>
                                                         </a>
-                                                    </li>
+                                                    </li> */}
                                                     <li>
                                                         <a
                                                             href={

@@ -31,34 +31,34 @@ import { useRouter } from "next/router";
 
 const categories = [
     {
-        name: "New Arrivals",
+        name: "Clothing",
         href: "#",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-01-category-01.jpg",
+            "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1602067306/gqftzzm0jrdi0qm1bpts.jpg",
     },
     {
-        name: "Productivity",
+        name: "Construction",
         href: "#",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-01-category-02.jpg",
+            "https://images.bisnis-cdn.com/posts/2019/08/22/1139799/cbd-surabaya-150817-1.jpg",
     },
     {
-        name: "Workspace",
+        name: "Event Vendor",
         href: "#",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-01-category-04.jpg",
+            "https://www.nme.com/wp-content/uploads/2022/06/dwp-2019@2000x1270.jpg",
     },
     {
-        name: "Accessories",
+        name: "Technology",
         href: "#",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-01-category-05.jpg",
+            "https://www.goodnewsfromindonesia.id/uploads/post/large-ilustrasi-programmer-10831695f73ed7ae1077db9dd1ff1c1f.jpg",
     },
     {
-        name: "Sale",
+        name: "Transportation",
         href: "#",
         imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg",
+            "https://asset.kompas.com/crops/2QT06PnKYP2gcK54xuba8gN9um0=/0x0:1000x667/750x500/data/photo/2019/02/25/1668998051.jpg",
     },
 ];
 const collections = [
@@ -124,20 +124,18 @@ export default function main() {
 
                 <div className="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-64 lg:px-0">
                     <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">
-                        What services do you need
+                        What services do you need?
                     </h1>
-                    <p className="mt-4 text-xl text-white">
-                        The new arrivals have, well, newly arrived. Check out
-                        the latest options from our summer small-batch release
-                        while they're still in stock.
-                    </p>
+                    {/* <p className="mt-1 text-xl text-white">
+                        
+                    </p> */}
                     {/* <a
             href="#"
             className="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
           >
             Shop New Arrivals
           </a> */}
-                    <div className="py-3 px-8 mt-8 flex">
+                    <div className="py-3 px-8 mt-1 flex">
                         <Comboboxes />
                         <button
                             type="button"
@@ -157,20 +155,20 @@ export default function main() {
                 {/* Category section */}
                 <section
                     aria-labelledby="category-heading"
-                    className="pt-24 sm:pt-32 xl:mx-auto xl:max-w-7xl xl:px-8"
+                    className="mb-10 pt-24 sm:pt-32 xl:mx-auto xl:max-w-7xl xl:px-8"
                 >
                     <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
                         <h2
                             id="category-heading"
                             className="text-2xl font-bold tracking-tight text-gray-900"
                         >
-                            Shop by Category
+                            Service by needs
                         </h2>
                         <a
                             href="#"
                             className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
                         >
-                            Browse all categories
+                            Browse all services
                             <span aria-hidden="true"> &rarr;</span>
                         </a>
                     </div>
@@ -221,7 +219,7 @@ export default function main() {
                 </section>
 
                 {/* Featured section */}
-                <section
+                {/* <section
                     aria-labelledby="social-impact-heading"
                     className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 sm:pt-32 lg:px-8"
                 >
@@ -262,10 +260,10 @@ export default function main() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Collection section */}
-                <section
+                {/* <section
                     aria-labelledby="collection-heading"
                     className="mx-auto max-w-xl px-4 pt-24 sm:px-6 sm:pt-32 lg:max-w-7xl lg:px-8"
                 >
@@ -306,10 +304,10 @@ export default function main() {
                             </a>
                         ))}
                     </div>
-                </section>
+                </section> */}
 
                 {/* Featured section */}
-                <section
+                {/* <section
                     aria-labelledby="comfort-heading"
                     className="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8"
                 >
@@ -346,7 +344,7 @@ export default function main() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </main>
         </div>
     );

@@ -5,10 +5,9 @@ import { Combobox } from '@headlessui/react'
 const people = [
   { id: 1, name: 'Clothing' },
   { id: 2, name: 'Construction' },
-  { id: 3, name: 'Cooperation' },
-  { id: 4, name: 'Event Vendor' },
-  { id: 5, name: 'Technology' },
-  { id: 6, name: 'Transportation' }
+  { id: 3, name: 'Event Vendor' },
+  { id: 4, name: 'Technology' },
+  { id: 5, name: 'Transportation' }
   // More users...
 ]
 
