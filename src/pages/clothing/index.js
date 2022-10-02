@@ -161,18 +161,21 @@ export default function index() {
                                     href={product.href}
                                     className="group"
                                 >
-                                    <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 text-center card-zoom ">
+                                {/* aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 text-center */}
+                                {/* h-full w-full object-cover opacity-25 object-center group-hover:opacity-100 */}
+                                {/* mt-4 text-lg relative  */}
+                                    <div className=" card-zoom ">
                                         <img
                                             src={product.imageSrc}
                                             alt={product.imageAlt}
-                                            className="h-full w-full object-cover opacity-25 object-center group-hover:opacity-100 card-zoom-image "
+                                            className=" card-zoom-image "
                                             onClick={() =>
                                                 router.push(
                                                     "/clothing/embosing"
                                                 )
                                             }
                                         />
-                                    <h3 className="mt-4 text-lg align-center justify-center card-zoom-text">
+                                        <h3 className="card-zoom-text">
                                             {product.name} 
                                             </h3>
                                     </div>
