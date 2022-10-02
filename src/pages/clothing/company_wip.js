@@ -142,35 +142,29 @@ export default function company() {
                 <main className="py-10">
                     <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3">
                         {/* Card */}
-                        <div className="lg:col-span-1 bg-white shadow sm:rounded-lg px-4 py-5 sm:px-6">
-                            <div className="flex flex-col items-center pb-10 pt-6">
-                                <img
-                                    className="mb-3 w-24 h-24 rounded-full shadow-lg"
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                    // src={companyLogo}
-                                    alt="Bonnie image"
-                                />
-                                <h5 className="mb-1 text-xl font-medium text-gray-900">
-                                    Fhunk
-                                </h5>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">
-                                    Joined in 2002
-                                </span>
-                                <div className="flex mt-4 space-x-3 md:mt-6">
-                                    <a
-                                        href="#"
-                                        className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    >
-                                        Add friend
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
-                                    >
-                                        Message
-                                    </a>
+                        <div className="flex flex-col">
+                            <div className="lg:col-span-1 bg-white shadow sm:rounded-lg px-4 py-5 sm:px-6">
+                                <div className="flex flex-col items-center pb-10 pt-6">
+                                    <img
+                                        className="mb-3 w-24 h-24 rounded-full shadow-lg"
+                                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        // src={companyLogo}
+                                        alt="Bonnie image"
+                                    />
+                                    <h5 className="mb-1 text-xl font-medium text-gray-900">
+                                        Fhunk
+                                    </h5>
+                                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                                        Joined in 2002
+                                    </span>
                                 </div>
                             </div>
+                            <button
+                                type="button"
+                                className="text-center mt-6 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 w-full"
+                            >
+                                Request Services
+                            </button>
                         </div>
                         {/* About Card */}
                         <section
