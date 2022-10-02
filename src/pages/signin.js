@@ -1,3 +1,5 @@
+import ourLogo from "src/images/ourLogo.png"
+
 /*
   This example requires some changes to your config:
   
@@ -27,8 +29,8 @@ export default function signin() {
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
                     <img
                         className="mx-auto h-12 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="Your Company"
+                        src={ourLogo.src}
+                        alt="Our Logo"
                     />
                     <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
                         Sign in to your account

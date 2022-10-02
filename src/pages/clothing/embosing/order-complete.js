@@ -29,7 +29,7 @@ export default function Example() {
                                 Thank you for ordering the service!
                             </h3>
                             <p class="text-gray-600 my-2">
-                                Order Number #69696969
+                                Order Number #314159
                             </p>
                             <p className="text-sm text-gray-500">
                                 {" "}

@@ -39,31 +39,58 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "next/router";
+import companyLogo from "src/images/companyLogo.png"
+import work1 from "src/images/work1.jpg"
+import work2 from "src/images/work2.jpg"
+import work3 from "src/images/work3.jpg"
 
 const reviews = [
     {
         id: 1,
         rating: 5,
         content: `
-      <p>This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!</p>
+      <p>Best quality! The embossing is nicely done. Can't wait to order into the next one.</p>
     `,
-        date: "July 16, 2021",
-        datetime: "2021-07-16",
-        author: "Emily Selman",
-        avatarSrc:
-            "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
+        date: "30 September 2022",
+        datetime: "2022-09-30",
+        author: "Marques",
+        avatarSrc: "https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     },
     {
         id: 2,
         rating: 5,
         content: `
-      <p>Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.</p>
+      <p>They did my order very well, quick response and best price on the market.</p>
     `,
-        date: "July 12, 2021",
-        datetime: "2021-07-12",
-        author: "Hector Gibbons",
+        date: "15 September 2022",
+        datetime: "2022-09-15",
+        author: "Alex",
         avatarSrc:
-            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80",
+            "https://images.unsplash.com/photo-1526510747491-58f928ec870f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    },
+    {
+        id: 3,
+        rating: 4,
+        content: `
+      <p>There was a problem at first however we solved it and everything was good.</p>
+    `,
+        date: "7 September 2022",
+        datetime: "2022-09-7",
+        author: "Ana",
+        avatarSrc:
+            "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA2fHxyYW5kb20lMjBwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    },
+    {
+        id: 4,
+        rating: 5,
+        content: `
+      <p>Trust me on this, best place to get embroidery done 10/10.</p>
+    `,
+        date: "3 September 2022",
+        datetime: "2022-09-3",
+        author: "Bagus",
+        avatarSrc:
+            "https://images.unsplash.com/photo-1517598024396-46c53fb391a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjE1fHxyYW5kb20lMjBwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     },
     // More reviews...
 ];
@@ -127,50 +154,32 @@ const product = {
 const someOfOurWork = [
     {
         id: 1,
-        name: "Zip Tote Basket",
-        color: "White and black",
+        name: "White T-shirt",
+        color: "White",
         href: "#",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg",
-        imageAlt:
-            "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
-        price: "$140",
+        imageSrc: work1.src,
+        imageAlt: "White T-shirt",
+        price: "Rp.20000",
     },
     {
         id: 2,
-        name: "Zip Tote Basket",
-        color: "White and black",
+        name: "Blue Hat and Blue T-shirt",
+        color: "Dark Blue",
         href: "#",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg",
-        imageAlt:
-            "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
-        price: "$140",
+        imageSrc: work2.src,
+        imageAlt: "Dark Blue T-shirt and Hat",
+        price: "Rp.50000",
     },
     {
         id: 3,
-        name: "Zip Tote Basket",
-        color: "White and black",
+        name: "Police T-shirt",
+        color: "Dark Blue",
         href: "#",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg",
-        imageAlt:
-            "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
-        price: "$140",
+        imageSrc: work3.src,
+        imageAlt: "Police T-shirt",
+        price: "Rp.70000",
     },
-    {
-        id: 3,
-        name: "Zip Tote Basket",
-        color: "White and black",
-        href: "#",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-03-related-product-01.jpg",
-        imageAlt:
-            "Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls.",
-        price: "$140",
-    },
-
-    // More products...
+    // More Products...
 ];
 
 const companyDetail = [
@@ -213,9 +222,9 @@ export default function detail() {
                                     <div className="flex flex-col items-center pb-10 pt-6">
                                         <img
                                             className="mb-3 w-24 h-24 rounded-full shadow-lg"
-                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                            src={companyLogo.src}
                                             // src={companyLogo}
-                                            alt="Bonnie image"
+                                            alt="Company Logo"
                                         />
                                         <h5 className="text-xl font-medium text-gray-900">
                                             Pusat Bordir Custom
@@ -251,7 +260,7 @@ export default function detail() {
                                         )
                                     }
                                 >
-                                    Request Services
+                                    REQUEST SERVICE
                                 </button>
                             </div>
 
@@ -261,7 +270,7 @@ export default function detail() {
                                 <div className="overflow-hidden bg-white shadow sm:rounded-lg">
                                     <div className="px-4 py-5 sm:px-6">
                                         <h3 className="text-lg font-medium leading-6 text-gray-900">
-                                            About
+                                            About Us
                                         </h3>
                                         <p className="mt-1 max-w-2xl text-sm text-gray-500">
                                             Custom embroidery for small and
@@ -276,7 +285,7 @@ export default function detail() {
                                         <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                                             <div className="sm:col-span-2">
                                                 <dt className="text-sm font-medium text-gray-500">
-                                                    We can send to
+                                                    We Can Send To
                                                 </dt>
                                                 <dd className="mt-1 text-sm text-gray-900">
                                                     Jakarta, Bekasi, Depok
@@ -284,7 +293,7 @@ export default function detail() {
                                             </div>
                                             <div className="sm:col-span-2">
                                                 <dt className="text-sm font-medium text-gray-500">
-                                                    We Provide:
+                                                    We Provide
                                                 </dt>
                                                 <dd className="mt-1 text-sm text-gray-900">
                                                     Embroidery, Tailor,
@@ -307,7 +316,7 @@ export default function detail() {
                                                                     aria-hidden="true"
                                                                 />
                                                                 <span className="ml-2 w-0 flex-1 truncate">
-                                                                    fhunk_contract_agreement.pdf
+                                                                    vendor_contract_agreement.pdf
                                                                 </span>
                                                             </div>
                                                             <div className="ml-4 flex-shrink-0">
@@ -416,10 +425,10 @@ export default function detail() {
                                     id="related-heading"
                                     className="text-2xl font-bold text-gray-900"
                                 >
-                                    Some of our work
+                                    Some of our works
                                 </h2>
 
-                                <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+                                <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
                                     {someOfOurWork.map((product) => (
                                         <div key={product.id}>
                                             <div className="relative">
