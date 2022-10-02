@@ -38,6 +38,7 @@ import { PaperClipIcon } from "@heroicons/react/20/solid";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/router";
 
 const reviews = [
     {
@@ -195,11 +196,12 @@ function classNames(...classes) {
 export default function detail() {
     const [open, setOpen] = useState(false);
     const [selectedColor, setSelectedColor] = useState(product.colors[0]);
+    const router = useRouter();
 
     return (
         <div className="bg-gray-100">
             <Header />
-            <div className="bg-white mt-4 bg-gray-100">
+            <div className="mt-4 bg-gray-100">
                 {/* Mobile menu */}
                 <main className="mx-auto max-w-7xl sm:px-6 sm:pt-16 lg:px-24">
                     <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -243,6 +245,11 @@ export default function detail() {
                                     type="button"
                                     // className="text-center mt-6 rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 w-full"
                                     className="text-center mt-6 items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+                                    onClick={() =>
+                                        router.push(
+                                            "/clothing/embosing/confirmation"
+                                        )
+                                    }
                                 >
                                     Request Services
                                 </button>
