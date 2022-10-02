@@ -15,51 +15,42 @@
   ```
 */
 import { Fragment, useState } from "react";
-import {
-    Dialog,
-    Disclosure,
-    Popover,
-    Tab,
-    Transition,
-} from "@headlessui/react";
+import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon, PlusIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
+import { StarIcon } from "@heroicons/react/20/solid";
 
 const filters = [
     {
         id: "color",
-        name: "Color",
+        name: "Location",
         options: [
-            { value: "white", label: "White" },
-            { value: "beige", label: "Beige" },
-            { value: "blue", label: "Blue" },
-            { value: "brown", label: "Brown" },
-            { value: "green", label: "Green" },
-            { value: "purple", label: "Purple" },
+            { value: "Jakarta", label: "Jakarta" },
+            { value: "Yogyakarta", label: "Yogyakarta" },
+            { value: "Padang", label: "Padang" },
         ],
     },
     {
-        id: "category",
-        name: "Category",
+        id: "Prices",
+        name: "Prices",
         options: [
-            { value: "new-arrivals", label: "All New Arrivals" },
-            { value: "tees", label: "Tees" },
-            { value: "crewnecks", label: "Crewnecks" },
-            { value: "sweatshirts", label: "Sweatshirts" },
-            { value: "pants-shorts", label: "Pants & Shorts" },
+            { value: "1", label: "< 15k" },
+            { value: "2", label: "15k - 50k" },
+            { value: "3", label: "50k - 100k" },
+            { value: "4", label: "100k - 200k" },
+            { value: "5", label: "> 200k" },
         ],
     },
     {
-        id: "sizes",
-        name: "Sizes",
+        id: "Reviews",
+        name: "Reviews",
         options: [
-            { value: "xs", label: "XS" },
-            { value: "s", label: "S" },
-            { value: "m", label: "M" },
-            { value: "l", label: "L" },
-            { value: "xl", label: "XL" },
-            { value: "2xl", label: "2XL" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4" },
+            { value: "3", label: "3" },
+            { value: "2", label: "2" },
+            { value: "1", label: "1" },
         ],
     },
 ];
@@ -92,6 +83,39 @@ const products = [
     // More products...
 ];
 
+const stars = {
+    1: <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />,
+    2: (
+        <div className="flex">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+    3: (
+        <div className="flex">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+    4: (
+        <div className="flex">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+    5: (
+        <div className="flex">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+};
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
@@ -279,11 +303,10 @@ export default function index() {
                 <main className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
                     <div className="border-b border-gray-200 pt-24 pb-10">
                         <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-                            Available Services
+                            Available Vendors
                         </h1>
                         <p className="mt-4 text-base text-gray-500">
-                            Checkout out the latest release of Basic Tees, new
-                            and improved with four openings!
+                            Lorem ipsum dolor sit amet, consectetur adipis
                         </p>
                     </div>
 
@@ -342,9 +365,13 @@ export default function index() {
                                                                     htmlFor={`${section.id}-${optionIdx}`}
                                                                     className="ml-3 text-sm text-gray-600"
                                                                 >
-                                                                    {
-                                                                        option.label
-                                                                    }
+                                                                    {section.name ==
+                                                                    "Reviews"
+                                                                        ? stars[
+                                                                              option
+                                                                                  .label
+                                                                          ]
+                                                                        : option.label}
                                                                 </label>
                                                             </div>
                                                         )
