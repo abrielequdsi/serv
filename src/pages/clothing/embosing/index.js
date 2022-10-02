@@ -15,83 +15,130 @@
   ```
 */
 import { Fragment, useState } from "react";
-import {
-    Dialog,
-    Disclosure,
-    Popover,
-    Tab,
-    Transition,
-} from "@headlessui/react";
+import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon, PlusIcon } from "@heroicons/react/20/solid";
 import { Header } from "@/components/Header";
+import { StarIcon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/router";
+import brand1 from "src/images/brand1.png";
+import brand2 from "src/images/brand2.png";
+import brand3 from "src/images/brand3.png";
+import brand4 from "src/images/brand4.png";
 
 const filters = [
     {
         id: "color",
-        name: "Color",
+        name: "Location",
         options: [
-            { value: "white", label: "White" },
-            { value: "beige", label: "Beige" },
-            { value: "blue", label: "Blue" },
-            { value: "brown", label: "Brown" },
-            { value: "green", label: "Green" },
-            { value: "purple", label: "Purple" },
+            { value: "Jakarta", label: "Jakarta" },
+            { value: "Yogyakarta", label: "Yogyakarta" },
+            { value: "Padang", label: "Padang" },
         ],
     },
     {
-        id: "category",
-        name: "Category",
+        id: "Prices",
+        name: "Prices",
         options: [
-            { value: "new-arrivals", label: "All New Arrivals" },
-            { value: "tees", label: "Tees" },
-            { value: "crewnecks", label: "Crewnecks" },
-            { value: "sweatshirts", label: "Sweatshirts" },
-            { value: "pants-shorts", label: "Pants & Shorts" },
+            { value: "1", label: "< 15k" },
+            { value: "2", label: "15k - 50k" },
+            { value: "3", label: "50k - 100k" },
+            { value: "4", label: "100k - 200k" },
+            { value: "5", label: "> 200k" },
         ],
     },
     {
-        id: "sizes",
-        name: "Sizes",
+        id: "Reviews",
+        name: "Reviews",
         options: [
-            { value: "xs", label: "XS" },
-            { value: "s", label: "S" },
-            { value: "m", label: "M" },
-            { value: "l", label: "L" },
-            { value: "xl", label: "XL" },
-            { value: "2xl", label: "2XL" },
+            { value: "5", label: "5" },
+            { value: "4", label: "4" },
+            { value: "3", label: "3" },
+            { value: "2", label: "2" },
+            { value: "1", label: "1" },
         ],
     },
 ];
 const products = [
     {
         id: 1,
-        name: "Basic Tee 8-Pack",
+        name: "Brodir 364",
         href: "/clothing/company",
-        price: "$256",
-        description:
-            "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
-        options: "8 colors",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-01.jpg",
+        price: "Rp25-45k",
+        description: "Bandung",
+        stars: "5",
+        imageSrc: brand1.src,
         imageAlt:
             "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
     },
     {
         id: 2,
-        name: "Basic Tee",
+        name: "Custom Kekinian",
         href: "/clothing/company",
-        price: "$32",
-        description:
-            "Look like a visionary CEO and wear the same black t-shirt every day.",
-        options: "Black",
-        imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-02.jpg",
-        imageAlt: "Front of plain black t-shirt.",
+        price: "Rp50-80k",
+        description: "Medan",
+        stars: "5",
+        imageSrc: brand2.src,
+        imageAlt:
+            "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
     },
-    // More products...
+    {
+        id: 3,
+        name: "Pontianak Bordir",
+        href: "/clothing/company",
+        price: "Rp20-40k",
+        description: "Pontianak",
+        stars: "4",
+        imageSrc: brand3.src,
+        imageAlt:
+            "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
+    },
+    {
+        id: 4,
+        name: "Pusat Bordir Custom",
+        href: "/clothing/company",
+        price: "Rp7-10k",
+        description: "Bekasi",
+        stars: "5",
+        imageSrc: brand4.src,
+        imageAlt:
+            "Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.",
+    },
 ];
 
+const stars = {
+    1: <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />,
+    2: (
+        <div className="flex">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+    3: (
+        <div className="flex ">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+    4: (
+        <div className="flex">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+    5: (
+        <div className="flex">
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+            <StarIcon className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+        </div>
+    ),
+};
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
@@ -99,6 +146,7 @@ function classNames(...classes) {
 export default function index() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+    const router = useRouter();
 
     return (
         <div className="bg-white">
@@ -279,11 +327,10 @@ export default function index() {
                 <main className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
                     <div className="border-b border-gray-200 pt-24 pb-10">
                         <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-                            Available Services
+                            Available Vendors
                         </h1>
                         <p className="mt-4 text-base text-gray-500">
-                            Checkout out the latest release of Basic Tees, new
-                            and improved with four openings!
+                            Lorem ipsum dolor sit amet, consectetur adipis
                         </p>
                     </div>
 
@@ -342,9 +389,13 @@ export default function index() {
                                                                     htmlFor={`${section.id}-${optionIdx}`}
                                                                     className="ml-3 text-sm text-gray-600"
                                                                 >
-                                                                    {
-                                                                        option.label
-                                                                    }
+                                                                    {section.name ==
+                                                                    "Reviews"
+                                                                        ? stars[
+                                                                              option
+                                                                                  .label
+                                                                          ]
+                                                                        : option.label}
                                                                 </label>
                                                             </div>
                                                         )
@@ -370,31 +421,31 @@ export default function index() {
                                     <div
                                         key={product.id}
                                         className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white"
+                                        onClick={() =>
+                                            router.push("/clothing/company")
+                                        }
                                     >
-                                        <div className="aspect-w-3 aspect-h-4 bg-gray-200 group-hover:opacity-75 sm:aspect-none sm:h-96">
+                                        <div className="aspect-h-4 bg-white group-hover:opacity-75 sm:aspect-none border-b-2">
                                             <img
+                                                // className="mx-auto h-40 w-40 xl:h-40 xl:w-40"
+                                                className="mx-auto h-40 w-40"
                                                 src={product.imageSrc}
                                                 alt={product.imageAlt}
-                                                className="h-full w-full object-cover object-center sm:h-full sm:w-full"
                                             />
                                         </div>
                                         <div className="flex flex-1 flex-col space-y-2 p-4">
-                                            <h3 className="text-sm font-medium text-gray-900">
-                                                <a href={product.href}>
-                                                    <span
-                                                        aria-hidden="true"
-                                                        className="absolute inset-0"
-                                                    />
+                                            <div>
+                                                <h3 className="text-lg font-medium text-gray-900">
                                                     {product.name}
-                                                </a>
-                                            </h3>
-                                            <p className="text-sm text-gray-500">
-                                                {product.description}
-                                            </p>
-                                            <div className="flex flex-1 flex-col justify-end">
-                                                <p className="text-sm italic text-gray-500">
-                                                    {product.options}
+                                                </h3>
+                                                <p className="text-sm text-gray-500">
+                                                    {product.description}
                                                 </p>
+                                            </div>
+                                            <div className="flex justify-between align-center">
+                                                <div className="">
+                                                    {stars[product.stars]}
+                                                </div>
                                                 <p className="text-base font-medium text-gray-900">
                                                     {product.price}
                                                 </p>
