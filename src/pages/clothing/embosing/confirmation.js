@@ -218,7 +218,7 @@ export default function confirmation() {
                                                 Vendor Policy
                                             </label>
                                             <div className="mt-1">
-                                                <input
+                                                {/* <input
                                                     type="text"
                                                     id="card-number"
                                                     name="card-number"
@@ -226,11 +226,35 @@ export default function confirmation() {
                                                     defaultValue="Will send the clothes within 3 x 24 Hours"
                                                     disabled
                                                     className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm disabled:cursor-not-allowed disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500"
-                                                />
+                                                /> */}
+                                                <ol class="list-disc ml-4">
+                                                    <li className="text-sm text-gray-500 pb-1">
+                                                        Now this is a story all
+                                                        about how, my life got
+                                                        flipped-turned upside
+                                                        down.
+                                                    </li>
+                                                    <li className="text-sm text-gray-500 pb-1">
+                                                        Once order is delivered
+                                                        there is a 24h window
+                                                        for customers to make
+                                                        complaints and refunds
+                                                        and it will only be
+                                                        granted after SERV
+                                                        Approve the reasoning
+                                                        behind it
+                                                    </li>
+                                                    <li className="text-sm text-gray-500 pb-1">
+                                                        Items Will only be
+                                                        delivered once customer
+                                                        made a full payment on
+                                                        SERV App.
+                                                    </li>
+                                                </ol>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="flex items-center mt-4">
+                                    <div className="flex items-center mt-6">
                                         <input
                                             id="remember-me"
                                             name="remember-me"
