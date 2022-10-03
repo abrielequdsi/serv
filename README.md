@@ -4,14 +4,14 @@ Serv is a platform for MSMEs to be able to easily find good vendors or services 
 
 ## Showcase
 
-![Image1](./images/image1.png)
-![Image2](./images/image2.png)
-![Image3](./images/image3.png)
-![Image4](./images/image4.png)
-![Image5](./images/image5.png)
-![Image6](./images/image6.png)
-![Image7](./images/image7.png)
-![Image8](./images/image8.png)
+![Image1](./examples/image1.png)
+![Image2](./examples/image2.png)
+![Image3](./examples/image3.png)
+![Image4](./examples/image4.png)
+![Image5](./examples/image5.png)
+![Image6](./examples/image6.png)
+![Image7](./examples/image7.png)
+![Image8](./examples/image8.png)
 
 ## Getting Started
 
